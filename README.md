@@ -13,7 +13,37 @@ Topics covered:
 * Insecure Storage: Encoding Basics
 * Parameter Tampering: Bypassing HTML Field Restrictions
 * Parameter Tampering: Exploit Hidden Fields
+* TamperData plugin
 
+## Assignment 2
+
+Topics covered:
+
+* Sessions and HTTPS
+* Browser behaviour of mixed HTTP/HTTPS content
+* Session Hijacking
+* Session Fixation
+* Brute forcing Session Cookie values with JHijack (or python_fuzzer.py)
+* HSTS (HTTP Strict Transport Security)
+* Session ID cookie (Secure / Httponly)
+
+## Assignment 3
+
+Topics covered:
+
+* ?
+
+## Assignment 4
+
+Topics covered:
+
+* ?
+
+## Assignment 5
+
+Topics covered:
+
+* ?
 
 ## Exam material
 
