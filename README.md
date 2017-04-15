@@ -31,19 +31,35 @@ Topics covered:
 
 Topics covered:
 
-* ?
+* Command Injection
+* Path Traversal
+* PHP Injection
+* (blind, numeric, string) SQL injection
+* Log Spoofing
 
 ## Assignment 4
 
 Topics covered:
 
-* ?
+* Attacks on clients: Javascript, DOM, XSS
+* XSS (Cross-Site Scripting)
+* Stored XSS attacks
+* Reflected XSS attaacks
+* SOP (Single-Origin-Policy)
+* Cookie Stealing
 
 ## Assignment 5
 
 Topics covered:
 
-* ?
+* More attacks on clients: ClickJacking/UI redressing & CSRF
+* Forced (aka forceful) browsing
+* CSRF (Cross Site Scripting Request Forgery)
+* Improper Error Handling - Fail Open Authentication Scheme
+* Concurrency - Shopping Cart Concurrency Flaw
+* Sanitisation of inputs (encoding, escaping, validation)
+* Cerificate manipulation
+* TLS tunneling
 
 ## Exam material
 
