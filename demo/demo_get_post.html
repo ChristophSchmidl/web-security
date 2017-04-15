@@ -1,0 +1,53 @@
+<html>
+  <title>Registration</title>
+  <body>
+    <h3>Using GET</h3>
+    <em>Some sample form, to generate a get request:</em><p>
+    &nbsp;&nbsp; Please enter your name to register
+    <form method="GET" action=
+      "http://www.w3schools.com/action_page.php">
+      &nbsp;&nbsp; First name: <input type="text" name="firstname">
+      Last name: <input type="text" name="lastname">
+      <input type="submit" value="Submit">
+    </form>
+    
+    <h3>Using POST</h3>
+    <em>Now the same with POST instead of GET:
+    </em><p>
+    &nbsp;&nbsp; Please enter your name to register
+
+    <form method="POST" action=
+      "http://www.w3schools.com/action_page.php">
+      &nbsp;&nbsp; First name: <input type="text" name="firstname">
+      Last name: <input type="text" name="lastname">
+      <input type="submit" value="Submit">
+    </form>
+    The website will now respond with "Your input was received as: Nothing" because this web page only looks at the query string in the URL, not at any query string in the body. If you observe the outgoing HTTP request, you can see that the query string is there.
+
+   <h3>Using GET with a hidden field</h3>
+    <em> Now a GET with a hidden field for the first name. This could for instance be a webpage tailored for user who already supplied their first name:</em><p>
+
+    &nbsp;&nbsp; Hello John, please also enter your last name to register:
+    <form method="GET" action=
+      "http://www.w3schools.com/action_page.php">
+      <input type="hidden" name="firstname" value="John">
+      &nbsp;&nbsp; Last name: 
+      <input type="text" name="lastname">
+      <input type="submit" value="Submit">
+    </form>
+    </p>
+    <h3>Using POST with a hidden field</h3>
+    <em> Now the same, but with a POST field:</em><p> 
+    &nbsp;&nbsp; Hello John, please also enter your last name to register:
+    <form method="POST" action=
+      "http://www.w3schools.com/action_page.php">
+      &nbsp;&nbsp; Last name: 
+      <input type="text" name="lastname">
+      <input type="hidden" name="firstname" value="John">
+      <input type="submit" value="Submit">
+    </form>
+    (Again, the website will now respond with "Your input was received as: Nothing".)
+  </body>
+</html>
+
+

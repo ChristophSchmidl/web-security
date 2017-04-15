@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html>
+
+  <head>
+  <meta charset="UTF-8">
+  <title>Framebusting using Javascript</title>
+  </head>
+
+  <body>
+
+  <h1>Blocking framebusting with javascript by using the HTML5
+  sandbox </h1>
+
+  This page includes <a href="framebuster.html"><tt>framebuster.html</tt></a> as iframe, but that sub-page will try to bust out of its frame.
+
+  <p>
+
+  But using the HTML5 sandbox feature we can prevent any
+  included iframes from trying to bust out of their frame,
+  as shown below. This can be done by the
+  default <tt>sandbox</tt> option, which not allow any scripts to
+  run
+
+  <p>
+
+  <iframe allow-scripts src="framebuster.html" sandbox width="700" height="250"></iframe> 
+
+  <p>
+
+  Even if we allow scripts to run in the iframe, with
+  <tt>sandbox="allow-scripts"</tt>, the iframe is still not
+  allowed to navigate up to its parent, as shown below
+
+  <p>
+
+  <iframe allow-scripts src="framebuster.html" sandbox="allow-scripts" width="700" height="250"></iframe> 
+
+  </body>
+</html>
+
+
+
+

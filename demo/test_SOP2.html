@@ -1,0 +1,55 @@
+<html>
+  <title>Exploring the Same Origin Policy</title>
+  <body>
+
+  <h2 id="header">Let's try out the Same Origin Policy (SOP)</h2>
+  Changing an iframe from an outer frame on the same domain.
+  <br>
+
+  <iframe src="http://www.cs.ru.nl/~erikpoll/sws2/demo/demo_DOM.html" name="another_frame" style="height:200px"></iframe>
+
+   <p onMouseDown="frames[0].location = 'http://wikipedia.org'">
+   Click here to change the frame.</p>
+
+   <p onMouseDown="frames[0].location = 'http://www.cs.ru.nl/~erikpoll/sws2/demo/demo_dom.html'">
+   And change it back.</p>
+
+  <input type="button" value="access location field of iframe above"
+   onclick="try { alert('accessing location of my own frame:'
+                          +frames[0].location)
+	        } catch(e) {
+	              alert('Error: '+e)
+	        }">
+		  
+  <input type="button" value="changeColor of iframe above"
+   onclick="try { frames[0].changeColor();
+	        } catch(e) {
+	              alert('Error: '+e)
+	        }">
+
+  <input type="button" value="change text in iframe above"
+   onclick="try { frames[0].changeHeader();
+	        } catch(e) {
+	              alert('Error: '+e)
+	        }">
+
+  <input type="button" value="reset header in iframe above"
+   onclick="try { frames[0].resetHeader();
+	        } catch(e) {
+	              alert('Error: '+e)
+	        }">
+		  
+  <p>
+		  
+  <p>
+		  
+  <p>
+  Accessing all the javascript functions of the inner frame is
+  allowed, if it belongs to the same domain.
+  
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,36 @@
+<html>
+  <title>Exploring the Same Origin Policy</title>
+  <body>
+
+  <h2 id="header">Let's try out the Same Origin Policy (SOP)</h2>
+  Changing an iframe from cs.ru.nl via the DOM 
+  <br>
+
+  <iframe src="http://www.cs.ru.nl/~erikpoll/sws2/demo/components/freempje.html" name="another_frame" style="height:200px"></iframe>
+
+   <p onMouseDown="frames[0].location = 'http://wikipedia.org'">
+   Click here (anywhere in this sentence) to change the frame.</p>
+
+   <p onMouseDown="frames[0].location = 'http://www.cs.ru.nl/~erikpoll/sws2/demo/components/freempje.html'">
+   And change it back.</p>
+
+  <input type="button" value="access location field of iframe above"
+   onclick="try { alert('accessing location of my own frame:'
+                          +frames[0].location)
+	        } catch(e) {
+	              alert('Error: '+e)
+	        }">
+		  
+  <p>
+  Accessing the <tt>location</tt> field of the frame is only allowed
+  for the same domain if it comes form the same domain, ie.  ru.nl.
+  <br>
+  Setting the <tt>location</tt> field of the frame is always allowed;
+  for other fields it is typically not allowed.
+
+  </body>
+</html>
+
+
+
+

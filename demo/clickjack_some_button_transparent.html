@@ -1,0 +1,21 @@
+<html>
+ <title>Clickjacking a button with UI redressing</title>
+ <body>
+
+<iframe id="clickjacking" src="components/some_button_we_clickjack.html" 
+  width="500" height="300"
+  scrolling="no" frameborder="none">
+</iframe>
+
+
+<p>
+
+Now we make the inner iframe transparant.
+Is the button still there and working?
+
+<style type="text/css">
+  #clickjacking { position: absolute; left: 7px; top: 81px;
+    opacity:0.0}
+  </style>
+</body>
+</html>

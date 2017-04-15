@@ -1,0 +1,97 @@
+<html>
+  <title>More JavaScript interacting with the DOM </title>
+  <body>
+
+   <!-- The HTML below warns the user if JavaScript is not enable-->
+   <noscript>
+       <p>You should enable JavaScript for this test!</p>
+   </noscript>
+
+   <h2>More JavaScript interacting with the DOM</h2>
+
+   This web page contains some JavaScript code that interacts with the
+   DOM. Look at the source code of this page to see the JavaScript code.
+
+   <hr>
+
+   <h4>Rewriting an HTML page in the browser using JavaScript</h4>
+
+   <p>The button below uses the function <tt>document.write</tt> to
+       rewrite the entire content of the current web page 
+       loaded in your browser.
+   </p>
+   <button onclick="document.write(3+4*4)">Invoke <tt>document.write(3+4*4)</tt></button>
+
+   <hr>
+
+   <h4>A nicer demo of rewriting an HTML page in the browser using JavaScript</h4>
+
+
+   <p>A bit nicer is the button below, which only rewrites
+      part of the content of your webpage, namely the paragraph
+      with the tag "demo" just above
+   </p>
+   <button onclick="document.getElementById('demo').innerHTML='Clicked'">Set the innerHTML field of the "demo" element on this page.
+   </button>
+
+   <p id="demo">A small paragraph of text, with the tag demo.</p>
+
+   </p>
+   <button onclick="document.getElementById('demo').innerHTML='A small paragraph of text, with the tag demo.'">Set it back.
+   </button>
+
+   <hr>
+
+   <h4>Inspecting the URL with JavaScript</h4>
+
+    Below we use javascript to extract the URL from the DOM. 
+    You can test that this works by adding superfluous parameters
+    to the URL, e.g. <tt>?naam=piet</tt>, or adding a fragment
+    at the end of the URL, e.g. <tt>#demo</tt>. For example,
+    click 
+    <a
+      href="http://www.cs.ru.nl/~erikpoll/websec/demo/javascript_demo.html?naam=piet#some_fragment">here</a>.
+
+    <p>
+
+   <p id="element1"></p>
+     <script type="text/javascript">
+       var x = document.URL; // extract the URL from the DOM
+       document.getElementById('element1').innerHTML = 'The URL of this page is '+ x;
+     </script>
+
+    <p>
+    Check that the URL in the text above matches the URL in the address bar
+    of your browser.</p>
+
+   <hr>
+
+   <h4>Extracting parameters from the URL </h4>
+
+   We can extract parameters from the URL. See the paragraph
+   below. Try changing the value of the 'naam' parameter in the
+   address bar, and reload the page, to see this in action.
+
+   <p id="element2"></p>
+
+    <script type="text/javascript">
+
+     /* The JavaScript function getQuery(name) below extracts the 
+	parameter 'name' form the URL. It is not necessary to
+	understand how it works */
+     function getQuery(name){
+        if (name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+             return decodeURIComponent(name[1]);
+     }
+     var name = getQuery("naam");
+     document.getElementById('element2').innerHTML = 'The parameter naam in the URL is ' + name;
+     </script>
+
+     <p> Change the 'naam' in the URL to a numeric value, reload the
+     page, and then click the button below.</p>
+   <button onclick="var name = getQuery('naam'); document.write(name*name)">Calculate the square of naam</button>
+
+  </body>
+</html>
+
+

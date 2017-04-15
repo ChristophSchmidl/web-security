@@ -1,0 +1,40 @@
+<html>
+ <title>Clickjacking with UI redressing</title>
+ <body>
+
+  <iframe id="inner" 
+    src="components/UI_redressing_bb_inner.html" width="410" height="40"
+    scrolling="no" frameborder="none">
+  </iframe>
+
+  &nbsp;&nbsp;
+  <p>
+  Click the button above to log out from our UI redressing demo site!
+
+  <p>
+
+  A fancier example of clickjacking, where we use UI redressing
+  to steal a button from the Blackboard website.
+  For the demo, log in to <a href="http://blackboard.ru.nl">Blackboard</a> first.
+
+  <p>
+
+  Unfortunately, this only works with JavaScript turned off,
+  otherwise BlackBoard takes over the whole browser window.
+  Apparently the Blackboard website uses JavaScript for
+  frame busting, as countermeasure to UI redressing attacks.
+  To see this frame busting in action, simply open this webpage
+  with JavaScript enabled.
+  Note that (also) using XFrame options would be a more
+  robust countermeasure against UI redressing attacks.
+
+  <p>
+
+
+
+  <style type="text/css">
+  #inner { position: absolute; left: -380; top: -14px;}
+  </style>
+
+</body>
+</html>

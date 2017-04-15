@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+  <head>
+  <meta charset="UTF-8">
+  <title>Framebusting using Javascript</title>
+  </head>
+
+  <body>
+
+  This web page uses Javascript to bust out of any iframe
+  that it is loading into, after a short delay.
+  NB using Javascript for this is no longer state-of-the-art,
+  and using <tt>X-Frame-Options</tt> is probably better.
+
+  <p>
+
+  <script type="text/javascript">
+   setTimeout(function(){
+      if (top != self) { top.location.replace(self.location.href); }
+  }, 2000);
+  </script>
+
+  To see how this works - or not -, just load the web pages
+  <a href="framebusting1.html">framebusting1.html</a> and
+  <a href="framebusting2.html">framebusting2.html</a> which
+  include this page inside an iframe.
+
+  <p>
+
+  Below some animation to check if javascript is executed.
+
+  <p>
+
+  <iframe src="movement.html"  width="60" height="60"></iframe>
+
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,32 @@
+<html>
+ <head><title>Example of CursorJacking</title>
+ <style>
+   body {cursor:none; background-color:white}
+ </style>
+ </head>
+
+ <body>
+ <img style="position: absolute; z-index:1;" id=cursor src="components/cursor.jpg"/>
+
+ <h1>Cursor-jacking!</h1>
+ </div>
+
+<button style="font-size: 150%;background-color:white;width:100px;position:absolute;top:130px;left:300px;">YES</button>
+<button style="font-size: 150%;background-color:white;width:100px;position:absolute;top:130px;left:400px;">NO</button>
+
+<div style="opacity:0.1; position:absolute; top:130px; left:130px;">
+ <a href="components\javascript.jpg">Click here</a>
+
+
+<script>
+ var oNode = document.getElementById('cursor');
+ var onmove = function(e) {
+    var nMoveX = e.clientX, nMoveY = e.clientY;
+    oNode.style.left = (nMoveX + 150)+"px";
+    oNode.style.top = nMoveY + "px";
+ };
+ document.body.addEventListener('mousemove', onmove, true);
+</script>
+
+</body>
+</html>

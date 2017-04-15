@@ -1,0 +1,67 @@
+<html>
+  <title>XSS via the DOM </title>
+  <body>
+
+   <!-- The HTML below warns the user if JavaScript is not enabled -->
+   <noscript>
+       <p>You should enable JavaScript for this test!</p>
+   </noscript>
+
+
+   <h2>XSS via the DOM</h2>
+
+   Go to this webpage with a parameter 'name' in the URL,
+   e.g. 
+   <a
+     href="http://www.cs.ru.nl/~erikpoll/websec/demo/xss_via_DOM.html?name=Jan">http://www.cs.ru.nl/~erikpoll/websec/demo/xss_via_DOM.html?name=Jan</a>.
+
+   <hr>
+
+   The fragment of HTML below uses JavaScript in combination with
+   the DOM to retrieve the name parameter from the URL and
+   inlcude it in the content of the page.
+
+   <p>
+
+   Hello
+   <script>
+     var pos=document.URL.indexOf("name=")+5;
+     document.write(document.URL.substring(pos,document.URL.length));
+   </script>!
+   Welcome to this webpage.
+
+   <p>
+
+   You can try to inject HTML mark-up tags, or even scripts, in
+   the name parameter, but most browser nowadays encode this. For
+   instance, using the link below:<br>
+   <a href="http://www.cs.ru.nl/~erikpoll/websec/demo/xss_via_DOM.html?name=<script>alert('Check how your browser handles this')</script>">http://www.cs.ru.nl/~erikpoll/websec/demo/xss_via_DOM.html?name=script>alert('Check how your browser handles this')</script>">http://www.cs.ru.nl</a>.
+
+   <hr>
+
+   If a webpage uses base64-encoding for some parameters, you
+   might still be able to sneak in JavaScript. The HTML fragment
+   below uses the JavaScript function <tt>atob</tt> to 
+   base64-decode the parameter 'name'.
+
+   <p>
+
+   Base64-decoding the parameter 'name' results in:
+   <script>
+     var pos=document.URL.indexOf("name=")+5;
+     document.write(atob(document.URL.substring(pos,document.URL.length)));
+   </script>
+
+   <p>
+
+   Now base64-encode your favourite bit of JavaScript and give
+   that as value of the parameter 'name' for a XSS attack. For
+   example, you can use 
+   <pre>
+   PHNjcmlwdD5hbGVydCgnbXkgZmlyc3QgWFNTIGF0dGFjayB2aWEgdGhlIERPTSEnKTwvc2NyaXB0Pg==
+   </pre>
+
+  </body>
+</html>
+
+

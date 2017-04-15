@@ -1,0 +1,125 @@
+<html>
+
+ <title>Interacting with the DOM</title>
+
+
+
+ <head>
+
+  <script type="text/javascript">
+
+
+    function changeColor(){
+
+      if (document.bgColor=="#ffffff") {document.bgColor="#fff00";
+}
+
+     else {document.bgColor="#ffffff";}
+
+    }
+
+
+
+
+    function changeTitle(){
+
+      document.title = "This is the new page title."
+
+    }
+
+
+
+    function resetTitle(){
+
+      document.title = "Interacting with the DOM"
+
+    }
+
+
+
+    function changeHeader(){
+
+     var s = "New text! Let's print a random number: ";
+
+     var rnd = Math.floor(Math.random()*11);
+
+     var s = s.concat(rnd);
+ 
+     document.getElementById("header").innerHTML = s;
+
+    }
+
+
+
+    function resetHeader(){
+
+     document.getElementById("header").innerHTML = "Let's interact with the DOM";
+
+    }
+
+
+
+ </script>
+
+ </head>
+
+
+
+ <body bgColor="#ffff00">
+
+
+  <h1 id="header">Let's interact with the DOM</h1>
+
+
+
+  <button type="button" onClick="javascript:changeColor()">
+
+    Change the colour!
+
+  </button>
+
+  <p>
+
+
+
+  <button type="button" onClick="javascript:changeTitle()">
+
+    Change title of this webpage.
+
+  </button>
+
+
+
+  <button type="button" onClick="javascript:resetTitle()">
+
+    And set it back.
+
+  </button>
+
+  <p>
+
+
+
+  <button type="button" onClick="javascript:changeHeader()">
+
+    Change text above
+
+  </button>
+
+
+
+  <button type="button" onClick="javascript:resetHeader()">
+
+    And set it back to what it was.
+
+  </button>
+
+
+
+  </body>
+
+</html>
+
+
+
+

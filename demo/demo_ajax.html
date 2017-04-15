@@ -1,0 +1,51 @@
+<html>
+<title>Ajax demo</title>
+<body>
+<h3>Using Ajax (Asynchronous javascript and XML)</h3>
+    
+When you type a character in the input field below, an
+XMLHttpRequest is sent to the server, and some name suggestions
+are returned (from the server):</p>
+
+<script>
+function showHint(str)
+{
+document.getElementById("txtHint").innerHTML="LEEG";
+if (str.length==0) { 
+    document.getElementById("txtHint").innerHTML="LEEG";
+    return;
+} else {
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+      if (xmlhttp.readyState==4){ //&& xmlhttp.status==200) {
+              document.getElementById("txtHint").innerHTML=innerHTML=xmlhttp.responseText;
+	}
+        //if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+        //    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+        //}
+    };
+    xmlhttp.open("GET","https://www.w3schools.com/php/gethint.php?q=" + str,true);
+    xmlhttp.send();
+}    
+}
+</script>
+
+<form action="javascript:void(0);">
+<p><b>Start typing a name in the input field below:</b></p>
+<p> Name: <input type="text" id="txt1"
+	onkeyup="showHint(this.value)" size="20">
+	&nbsp;&nbsp;Suggestions: <span id="txtHint"></span>
+	</p>
+      </form>
+    </div>
+  </body>
+</html>
+
+ <p>
+This example uses JavaScript, Ajax, and the DOM (Domain Object Model):
+<ul>
+<li> The JavaScript function <tt>showHint</tt> is called on each <tt>onkeyup</tt> event, i.e. each time a key has been pressed. This in turn calls 
+<tt>https://www.w3schools.com/php/gethint.php?q=...</tt> on the server to get a suggestion.
+<li> The DOM is then used update the page with the retrieved suggestion. To be precise, the element labelled as <tt>textHint</tt> on the webpage is updated.
+</ul>
+

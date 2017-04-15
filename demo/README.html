@@ -1,0 +1,71 @@
+<html>
+  <title>websec demos </title>
+
+   <body>
+
+     <h2>Demo webpages for Web Security </h2>
+
+     This directory contains some examples that illustrate some
+     features of the web (or more in particular, of HTTP and HTML), including
+     <ul>
+       <li>GET and POST requests
+       <li>mixing HTTP and HTTPS content
+       <li>javascript
+       <li>the DOM (Document Object Model)
+       <li>the SOP (Single Origin Policy)
+       <li>the use of frames, and ways to abuse these, for
+       instance for ClickJacking
+     </ul>
+     Note that this file <a href="http://www.cs.ru.nl/~erikpoll/websec/demo/README.html">README.html</a> is included automatically by
+     the webserver is you ask for a directory listing of
+     <a href="http://www.cs.ru.nl/~erikpoll/websec/demo/">http://www.cs.ru.nl/~erikpoll/websec/demo</a>.
+
+     <p>
+     The demoes in this directory are:
+     <ul>
+       <li> <a href="demo_get_post.html">demo_get_post.html</a>
+       is a page with GET and POST requests.
+       <p>
+       <li> <a href="mixed_content.html">mixed_content.html</a>
+       is a page which mixes HTTP and HTTPS content.
+       <p>
+       <li> <a href="demo_javascript.html">demo_javascript.html</a>
+       is a page with simple JavaScript to create an alert
+       window.
+       <p>
+       <li> <a href="demo_DOM.html">demo_DOM.html</a>
+            is webpage with some buttons that invoke javascript
+	    functions to interact with the webpage using the DOM
+	    (Document Object Model).
+       <p>
+       <li> <a href="test_SOP.html">test_SOP.html</a>
+       and <a href="test_SOP2.html">test_SOP2.html</a> are pages with
+       inner frames that test the Single Origin Policy (SOP),
+       <p>
+       <li> Web pages with ClickJacking/UI redressing:
+       <a href="clickjack_basic.html">clickjack_basic.html</a> ,
+       <a href="clickjack_some_button.html">clickjack_some_button.html</a> 
+       <a href="clickjack_some_button_transparent.html">clickjack_some_button_transparent.html</a>
+       <p>
+       <li>
+       The Clickjacking examples
+       <a href="clickjack_bb_using_UI_redressing.html">clickjack_bb_using_UI_redressing.html</a>
+	and
+	<a href="clickjack_radboudnet_using_UI_redressing.html">clickjack_radboudnet_using_UI_redressing.html</a> 
+	attempt UI redressing on <a href="https://blackboard.ru.nl">Blackboard.ru.nl</a> and <a href="https://www.radboudnet.nl">Radboudnet.nl</a>, but
+	these might not work depending on your browser settings.
+	For instance, Blackboard uses javascript for frame busting,
+	so the example will only  work with javascript turned
+	off; or else you can see the effect of the frame busting.
+	Also, if you're not logged on to Blackboard resp. Radboudnet
+	they might not look as intended.
+	<p>
+       <li>
+       The more fancy <a href="cursor-jacking.html">Cursor
+	 clickjacking attack</a> shows shows how the attacker can 
+       confuse the user about where the cursor really is, and
+       hence about what he is clicking.
+     </ul>
+
+   </body>
+</html>

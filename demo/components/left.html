@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<script>
+  function work() {
+    alert('work at the left window '+location.host)
+  }
+  document.domain = 'www.cs.ru.nl'
+</script>
+
+<input type="button" value="work()" onclick="work()">
+<br>
+<input type="button" value="parent.work()" onclick="parent.work()">
+<br>
+<input type="button" value="parent.frames.right.work()" onclick="parent.frames.right.work()">
+
+</body>
+</html>
+

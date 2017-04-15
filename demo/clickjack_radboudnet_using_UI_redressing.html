@@ -1,0 +1,29 @@
+<html>
+ <title>Clickjacking with UI redressing</title>
+ <body>
+
+  <iframe id="inner" 
+    src="components/UI_redressing_radboudnet_inner.html" width="1000" height="50"
+    scrolling="no" frameborder="none">
+  </iframe>
+
+  &nbsp;&nbsp;
+  <p>
+  Click the button above to log out from our UI redressing demo site!
+
+  <p>
+
+  A fancier example of clickjacking, where we use UI redressing
+  to steal the Logout button from the Radboudnet website.
+  For the demo, log in to <a href="http://www.radboudnet.nl">Radboudnet</a> first.
+
+  <p>
+
+  This one also works with JavaScript turned on.
+
+  <style type="text/css">
+  #inner { position: absolute; left: -900; top: -34px;}
+  </style>
+
+</body>
+</html>
