@@ -1,5 +1,7 @@
 # Web Security
 
+![alt tag](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
+
 This repository contains all assignments for the course "Web Security" (NWI-IPC026) given at the Radboud University.
 
 ## Assignment 1
