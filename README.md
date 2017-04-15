@@ -34,8 +34,8 @@ As a checklist to help with revision: you should at least be able to explain
 * what the SOP is, and which interactions prevents, and what the motivations behind these restrictions are
 * how the attacks discussed in the lectures work, what the differences between (variants of these) attacks are, incl.
 
-** OS command injection
-** (blind) SQL injection
+	* OS command injection
+	* (blind) SQL injection
 database command injection
 path/file name injection aka path traversal attack
 Remote and Local PHP File Inclusion
