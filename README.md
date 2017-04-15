@@ -8,7 +8,7 @@ Topics covered:
 
 * How to work with WebGoat
 * HTTP Basics
-* Coda Quality: Discovering clues in the HTML
+* Code Quality: Discovering clues in the HTML
 * Insecure Storage: Encoding Basics
 * Parameter Tampering: Bypassing HTML Field Restrictions
 * Parameter Tampering: Exploit Hidden Fields
