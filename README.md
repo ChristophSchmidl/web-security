@@ -36,30 +36,31 @@ As a checklist to help with revision: you should at least be able to explain
 
 	* OS command injection
 	* (blind) SQL injection
-database command injection
-path/file name injection aka path traversal attack
-Remote and Local PHP File Inclusion
-HTML injection as a simple form of XSS, just for defacing websites
-XSS (reflected, stored, or DOM-based), eg to steal cookies, or carry out other actions in the victim's browser with the user's priviliges
-CSRF
-forced aka forceful browsing
-URL obfuscation
-SSL stripping, possibly in combination with fake certificate chains by abusing absence of the check for leaf nodes, self-signed certificates, or URL obfuscation, and things like punycode and HSTS as countermeasures
-ClickJacking/UI redressing
-and what countermeasures there are to combat them, either client- or server-side, incl.
-sanitizing input and/or output, aka input validation or output encoding/escaping, either client-side (ie. in the browser) or server-side
-browser plugins to control cookies, disable scripting, do domain highlighting, use puny-code, warn about clickjacking, do output validation (aka sanatize) outgoing HTTP traffic, ...;
-access control, sandboxing or more generally applying the principle of least principle;
-specifically for SQL injection: parameterised queries & stored procedures, ...
-specifically for UI redressing: frame-busting, X-frame options
-which risks to privacy there are on the web, incl.
-IP addresses
-(third-party) cookies
-Flash cookies
-Etags
-web beacons
-browser fingerprinting
-leaking browser history
-how the mechanism above work, and possible countermeasures, notably cookie blockers.
-attacker models, the types of attackers, attack vectors they can employ, and some of the ways cyber criminals make their money.
+	* database command injection
+	* path/file name injection aka path traversal attack
+	* Remote and Local PHP File Inclusion
+	* HTML injection as a simple form of XSS, just for defacing websites
+	* XSS (reflected, stored, or DOM-based), eg to steal cookies, or carry out other actions in the victim's browser with the user's priviliges
+	* CSRF
+	* forced aka forceful browsing
+	* URL obfuscation
+	* SSL stripping, possibly in combination with fake certificate chains by abusing absence of the check for leaf nodes, self-signed certificates, or URL obfuscation, and things like punycode and HSTS as countermeasures
+	* ClickJacking/UI redressing
+	and what countermeasures there are to combat them, either client- or server-side, incl.
+	* sanitizing input and/or output, aka input validation or output encoding/escaping, either client-side (ie. in the browser) or server-side
+	* browser plugins to control cookies, disable scripting, do domain highlighting, use puny-code, warn about clickjacking, do output validation (aka sanatize) outgoing HTTP traffic, ...;
+	* access control, sandboxing or more generally applying the principle of least principle;
+	* specifically for SQL injection: parameterised queries & stored procedures, ...
+	* specifically for UI redressing: frame-busting, X-frame options
+* which risks to privacy there are on the web, incl.
+	* IP addresses
+	* (third-party) cookies
+	* Flash cookies
+	* Etags
+	* web beacons
+	* browser fingerprinting
+	* leaking browser history
+* how the mechanism above work, and possible countermeasures, notably cookie blockers.
+* attacker models, the types of attackers, attack vectors they can employ, and some of the ways cyber criminals make their money.
+
 The list above is not exhaustive: there can be questions on any material from the lectures or the lab exercises. You will not be expected to know the precise SQL syntax or HTML syntax for any of these attacks.
