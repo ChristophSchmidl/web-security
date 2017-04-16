@@ -1,0 +1,67 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[hyphens]{url}
+\usepackage{titling}
+\usepackage{varwidth}
+\usepackage{hyperref}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={165mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\title{Web Security\\Assignment 2}
+\author{
+  Christoph Schmidl\\ s4226887\\ Data Science\\      \texttt{c.schmidl@student.ru.nl}
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+
+\item Inspect 5 websites for which you got login credentials
+	\begin{itemize}
+		\item Do these website use HSTS (HTTP Strict Transport Security)?
+		\item Does the session ID cookie of these websites use \textit{Secure} and/or \textit{HttpOnly}?
+	\end{itemize}
+
+Make a table of these websites and their support for HSTS, the name of the cookie and the usage of \textit{Secure} and \textit{HttpOnly} for that cookie.\\
+\textbf{Solution:}\\
+
+\begin{table}[h!]
+\centering
+\label{my-label}
+\begin{tabular}{|c|l|c|c|l|}
+\hline
+\textbf{Website} & \textbf{HSTS} & \textbf{Cookie Name}  & \textbf{Secure} & \textbf{HttpOnly} \\ \hline
+                       &  &                       &                       &  \\ \hline
+                       &  &                       &                       &  \\ \hline
+                       &  &                       &                       &  \\ \hline
+                       &  &                       &                       &  \\ \hline
+\multicolumn{1}{|l|}{} &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  \\ \hline
+\end{tabular}
+\caption{Website Information}
+\end{table}
+
+
+\end{enumerate}
+
+\end{document}
