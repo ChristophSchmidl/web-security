@@ -16,9 +16,12 @@
 		* ![EnterAString](img/get_request_output.PNG)
 		* ![EnterAString](img/get_request_raw.PNG)
 	* Simple POST Request
-		* ![EnterAString](img/post_request_output.PNG)
 		* ![EnterAString](img/post_request_raw.PNG)	
 
 * Does a hidden field provide better protection than a non-hidden field, or vice versa, or is there no difference?
 
-	* Answer
+	* Hidden field GET Request
+		* ![EnterAString](img/hidden_field_get_request_output.PNG)
+		* ![EnterAString](img/hidden_field_get_request_raw.PNG)
+	* Hidden field POST Request
+		* ![EnterAString](img/hidden_field_post_request_raw.PNG)	
