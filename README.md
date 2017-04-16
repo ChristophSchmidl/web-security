@@ -22,7 +22,7 @@ Topics covered:
 * Code Quality: Discovering clues in the HTML
 * Insecure Storage: Encoding Basics
 	* Encodings:
-		* Base64, Entity encoding, Password based encryption (PBE), MD5, SHA-256, Unicode encoding, URL encdoing, Hex encoding, Rot13, XOR with password encoding, Double unicode encoding, Double URL encoding
+		* Base64, Entity encoding, Password based encryption (PBE), MD5, SHA-256, Unicode encoding, URL encoding, Hex encoding, Rot13, XOR with password encoding, Double unicode encoding, Double URL encoding
 * Parameter Tampering: Bypassing HTML Field Restrictions
 * Parameter Tampering: Exploit Hidden Fields
 * TamperData plugin
