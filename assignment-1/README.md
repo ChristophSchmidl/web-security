@@ -2,7 +2,8 @@
 
 * In lesson "Insecure Storage - Encoding Basics" of WebGoat, what is the name of the encoding for the string field (the one after "Enter a string") in the HTTP request?
 
-	* If we take the following string as input without the quotation marks "test&fix", we'll get the following encoded string "test%26fix". ![EnterAString](img/encoding_enter_a_string.PNG)
+	* If we take the following string as input without the quotation marks "test&fix", we'll get the following encoded string "test%26fix". 
+	* ![EnterAString](img/encoding_enter_a_string.PNG)
 
 * In lesson "Insecure Storage - Encoding Basics" of WebGoat, what is the name of the encoding which is used for the (optional) password? (Hint: use your proxy to inspect the characters which you enter as inputs and their corresponding encoding in the HTTP request)
 
