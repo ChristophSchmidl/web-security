@@ -4,7 +4,7 @@
 
 This repository contains all assignments for the course "Web Security" (NWI-IPC026) given at the Radboud University.
 
-Note: For most of the assignments you'll need Webscarab and WebGoat. WebScarab is a Java-Application. Therefore it is highly recommended to install Java. I use an Ubuntu 16.04 image inside a VirtualBox environment. To Install Java:
+Note: For most of the assignments you'll need WebScarab and WebGoat. WebScarab is a Java-Application. Therefore it is highly recommended to install Java. I use an Ubuntu 16.04 image inside a VirtualBox environment. To Install Java:
 
 ```
 cs@cs-VirtualBox:~$ sudo add-apt-repository ppa:webupd8team/java
