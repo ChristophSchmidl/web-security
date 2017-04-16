@@ -9,7 +9,7 @@ Note: For most of the assignments you'll need WebScarab and WebGoat. WebScarab i
 ```
 cs@cs-VirtualBox:~$ sudo add-apt-repository ppa:webupd8team/java
 cs@cs-VirtualBox:~$ sudo apt-get update
-sudo apt-get install oracle-java8-installer
+cs@cs-VirtualBox:~$ sudo apt-get install oracle-java8-installer
 ```
 
 ## Assignment 1
