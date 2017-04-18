@@ -4,8 +4,16 @@
 
 	* Session Management Flaws - Hijack a Session
 		* ![HijackASession](img/hijack_a_session_screen.PNG)
+		*  Session hijacking, sometimes also known as cookie hijacking is the exploitation of a valid computer session—sometimes also called a session key—to gain unauthorized access to information or services in a computer system. In particular, it is used to refer to the theft of a magic cookie used to authenticate a user to a remote server.
+		* In this particular lesson the value of the cookie named "WEAKID" can be bruteforced by using a tool like JHijack. To find a value to start with you can use the SessionID Analysis Tab of WebScarab. You do not know the identity of the user's session you are going to hijack.
 	* Session Management Flaws - Session Fixation
 		* ![SessionFixation](img/session_fixation_screen.PNG)
+		* Session fixation attacks attempt to exploit the vulnerability of a system that allows one person to fixate (find or set) another person's session identifier. Most session fixation attacks are web based, and most rely on session identifiers being accepted from URLs (query string) or POST data.
+		* Straightforward scenario:
+			* Mallory has determined that http://unsafe.example.com/ accepts any session identifier, accepts session identifiers from query strings and has no security validation. http://unsafe.example.com/ is thus not secure.
+			* Mallory sends Alice an e-mail: "Hey, check this out, there is a cool new account summary feature on our bank, http://unsafe.example.com/?SID=I_WILL_KNOW_THE_SID". Mallory is trying to fixate the SID to I_WILL_KNOW_THE_SID.
+			* Alice is interested and visits http://unsafe.example.com/?SID=I_WILL_KNOW_THE_SID. The usual log-on screen pops up, and Alice logs on.
+			* Mallory visits http://unsafe.example.com/?SID=I_WILL_KNOW_THE_SID and now has unlimited access to Alice's account.
 
 * Inspect 5 websites for which you got login credentials
 	* Do these website use HSTS (HTTP Strict Transport Security)?
