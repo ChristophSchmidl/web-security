@@ -25,9 +25,9 @@
 |---|---|---|---|---|
 | facebook.com  |  yes | multiple cookies (c_user, xs, sb)  | yes, yes, yes  | no, yes, yes  |
 | mail.ru.nl  | no  | cadata  | yes  | yes  |
-| linkedin.com  |   |   |   |   |
-| github.com  |   |   |   |   |
-| gmx.net  |   |   |   |   |	
+| linkedin.com  | no  | li_at  | yes  | yes  |
+| github.com  | yes  | _gh_sess  | yes  | yes  |
+| gmx.net  | yes  | 905a7a5991a00898953878290a55d118  | yes  | yes  |	
 
 
 
