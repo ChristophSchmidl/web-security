@@ -14,6 +14,8 @@
 		* The Security Tab of Firefox' Network Tab also shows that HSTS is enabled by Facebook.
 		* ![FacebookSecurity](img/facebook_security.PNG)
 	* Does the session ID cookie of these websites use Secure and/or HttpOnly?
+		* Security of cookies is an important subject. HttpOnly and secure flags can be used to make the cookies more secure. When a secure flag is used, then the cookie will only be sent over HTTPS, which is HTTP over SSL/TLS. When this is the case, the attacker eavesdropping on the communication channel from the browser to the server will not be able to read the cookie (HTTPS provides authentication, data integrity and confidentiality). 
+		* When HttpOnly flag is used, JavaScript will not be able to read the cookie in case of XSS exploitation. A combination of HTTP TRACE method and XSS might be used to bypass HttpOnly flag – this combination is cross-site tracing (XST) attack. It turns out that modern browsers block the HTTP TRACE method in XMLHttpRequest. However, it’s still important to know how XST works. If the attacker finds another way of sending HTTP TRACE, then he can bypass an HttpOnly flag when he understands how XST works. (taken from: http://resources.infosecinstitute.com/securing-cookies-httponly-secure-flags/)
 
 * Make a table of these websites and their support for HSTS, the name of the cookie and the usage of Secure and HttpOnly for that cookie.
 
