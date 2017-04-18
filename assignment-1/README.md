@@ -6,7 +6,7 @@
 	* General: HTTP Basics
 		* ![HttpBasics](img/http_basics.PNG)
 	* Code Quality: Discover clues in the HTML
-		* ![DiscoverCluesInTheHtml](img/disocver_clues_in_the_html.PNG)	
+		* ![DiscoverCluesInTheHtml](img/discover_clues_in_the_html.PNG)	
 	* Insecure Storage: Encoding Basics:
 		* ![EncodingBasics](img/encoding_basics.PNG)
 	* Paramter Tampering: Bypass HTML Field Restrictions
