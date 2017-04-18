@@ -3,9 +3,9 @@
 * Do the following two lessons in WebGoat (you do not have to submit any notes regarding these exercises to blackboard):
 
 	* Session Management Flaws - Hijack a Session
-		* ![HijackASession](img/encoding.PNG)
+		* ![HijackASession](img/hijack_a_session_screen.PNG)
 	* Session Management Flaws - Session Fixation
-		* ![SessionFixation](img/encoding.PNG)
+		* ![SessionFixation](img/session_fixation_screen.PNG)
 
 * Inspect 5 websites for which you got login credentials
 	* Do these website use HSTS (HTTP Strict Transport Security)?
