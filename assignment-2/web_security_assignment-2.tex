@@ -36,6 +36,27 @@
 
 \begin{enumerate}
 
+\item Do the following two lessons in WebGoat (you do not have to submit any notes regarding these exercises to blackboard):
+
+	\begin{itemize}
+		\item Session Management Flaws - Hijack a Session
+		
+		\begin{figure}[H]
+	    \centering
+  	    \includegraphics[width=0.8\textwidth]{img/hijack_a_session_screen.PNG}
+	    \end{figure}	
+	    
+	    Session hijacking, sometimes also known as cookie hijacking is the exploitation of a valid computer session - sometimes also called a session key - to gain unauthorized access to information or services in a computer system. In particular, it is used to refer to the theft of a magic cookie used to authenticate a user to a remote server. In this particular lesson the value of the cookie named "WEAKID" can be bruteforced by using a tool like JHijack. To find a value to start with you can use the SessionID Analysis Tab of WebScarab. You do not know the identity of the user's session you are going to hijack beforehand.\\
+	    
+		\item Session Management Flaws - Session Fixation
+		
+		\begin{figure}[H]
+	    \centering
+  	    \includegraphics[width=0.8\textwidth]{img/session_fixation_screen.PNG}
+	    \end{figure}	
+	\end{itemize}
+
+
 
 \item Inspect 5 websites for which you got login credentials
 	\begin{itemize}
@@ -52,11 +73,11 @@ Make a table of these websites and their support for HSTS, the name of the cooki
 \begin{tabular}{|c|l|c|c|l|}
 \hline
 \textbf{Website} & \textbf{HSTS} & \textbf{Cookie Name}  & \textbf{Secure} & \textbf{HttpOnly} \\ \hline
-                       &  &                       &                       &  \\ \hline
-                       &  &                       &                       &  \\ \hline
-                       &  &                       &                       &  \\ \hline
-                       &  &                       &                       &  \\ \hline
-\multicolumn{1}{|l|}{} &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  \\ \hline
+facebook.com  & yes &   multiple cookies (c\_user, xs, sb)  & yes, yes, yes                      & no, yes, yes \\ \hline
+mail.ru.nl   & no &  cadata                     &   yes                    & yes  \\ \hline
+linkedin.com  & no & li\_at                      &    yes                   & yes  \\ \hline
+github.com  & yes &   	\_gh\_sess                    &  yes                     & yes  \\ \hline
+gmx.net & yes & 905a7a5991a00898953878290a55d118 & yes & yes \\ \hline
 \end{tabular}
 \caption{Website Information}
 \end{table}
