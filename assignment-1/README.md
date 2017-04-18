@@ -1,5 +1,19 @@
 # Assignment 1
 
+* Do the following lessons from OWASP WebGoat:
+	* Introduction: How to work with WebGoat
+		* ![HowToWorkWithWebGoat](img/how_to_work_with_webgoat.PNG)
+	* General: HTTP Basics
+		* ![HttpBasics](img/http_basics.PNG)
+	* Code Quality: Discover clues in the HTML
+		* ![DiscoverCluesInTheHtml](img/disocver_clues_in_the_html.PNG)	
+	* Insecure Storage: Encoding Basics:
+		* ![EncodingBasics](img/encoding_basics.PNG)
+	* Paramter Tampering: Bypass HTML Field Restrictions
+		* ![BypassHtmlFieldRestrictions](img/bypass_html_field_restrictions.PNG)
+	* Paramter Tampering: Exploit Hidden Fields
+		* ![ExploitHiddenFields](img/exploit_hidden_fields.PNG)					
+
 * In lesson "Insecure Storage - Encoding Basics" of WebGoat, what is the name of the encoding for the string field (the one after "Enter a string") in the HTTP request?
 
 	* If we take the following string as input without the quotation marks "string&test", we'll get the following encoded string "string%26test". 
