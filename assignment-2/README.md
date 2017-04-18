@@ -8,7 +8,8 @@
 		* In this particular lesson the value of the cookie named "WEAKID" can be bruteforced by using a tool like JHijack. To find a value to start with you can use the SessionID Analysis Tab of WebScarab. You do not know the identity of the user's session you are going to hijack beforehand.
 	* Session Management Flaws - Session Fixation
 		* ![SessionFixation](img/session_fixation_screen.PNG)
-		* Session fixation attacks attempt to exploit the vulnerability of a system that allows one person to fixate (find or set) another person's session identifier. Most session fixation attacks are web based, and most rely on session identifiers being accepted from URLs (query string) or POST data.
+		* Session fixation attacks attempt to exploit the vulnerability of a system that allows one person to fixate (find or set) another person's session identifier. Most session fixation attacks are web based, and most rely on session identifiers being accepted from URLs (query string) or POST data. A misconception is that if a server only accepts server-generated session identifiers, it is safe from fixation. This is false.
+		
 		* Straightforward scenario:
 			* Mallory has determined that http://unsafe.example.com/ accepts any session identifier, accepts session identifiers from query strings and has no security validation. http://unsafe.example.com/ is thus not secure.
 			* Mallory sends Alice an e-mail: "Hey, check this out, there is a cool new account summary feature on our bank, http://unsafe.example.com/?SID=I_WILL_KNOW_THE_SID". Mallory is trying to fixate the SID to I_WILL_KNOW_THE_SID.

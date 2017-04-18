@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.15)  18 APR 2017 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.15)  18 APR 2017 17:41
 entering extended mode
 **./web_security_assignment-2.tex
 (web_security_assignment-2.tex
@@ -468,20 +468,25 @@ Package pdftex.def Info: img/session_fixation_screen.PNG used on input line 55.
 
 {C:/Users/cs/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/hijack_a
 _session_screen.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 88.
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
 [2 <./img/session_fixation_screen.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 88.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
  (web_security_assignment-2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 88.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 88.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
 Package rerunfilecheck Info: File `web_security_assignment-2.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 88.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
  ) 
 Here is how much of TeX's memory you used:
  8209 strings out of 493334
@@ -490,7 +495,7 @@ Here is how much of TeX's memory you used:
  11625 multiletter control sequences out of 15000+200000
  11106 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,9n,32p,653b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,9n,32p,664b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
@@ -498,7 +503,7 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on web_security_assignment-2.pdf (2 pages, 172494 bytes).
+Output written on web_security_assignment-2.pdf (2 pages, 173878 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  6 named destinations out of 1000 (max. 500000)
