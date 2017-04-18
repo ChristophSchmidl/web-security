@@ -23,11 +23,11 @@
 
 | **Website**  | **HSTS**  | **Cookie Name**  | **Secure**  | **HttpOnly** |
 |---|---|---|---|---|
-| test  |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |	
+| facebook.com  |   |   |   |   |
+| mail.ru.nl  |   |   |   |   |
+| linkedin.com  |   |   |   |   |
+| github.com  |   |   |   |   |
+| gmx.net  |   |   |   |   |	
 
 
 
