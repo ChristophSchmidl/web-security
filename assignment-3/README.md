@@ -23,7 +23,7 @@
 		* ![StringSQLInjectionSuccess](img/string_sql_injection.PNG)
 
 	* Injection Flaws - LAB SQL Injection
-		* Answer				
+		* ![LabStringSQLInjection1](img/lab_string_sql_inection_1.PNG)			
 
 * Do the following three exercises on http://websecurity.cs.ru.nl/
 	
