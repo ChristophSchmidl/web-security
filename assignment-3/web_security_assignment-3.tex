@@ -25,7 +25,7 @@
  top=20mm,
  }
 
-\title{Web Security\\Assignment 2}
+\title{Web Security\\Assignment 3}
 \author{
   Christoph Schmidl\\ s4226887\\ Data Science\\      \texttt{c.schmidl@student.ru.nl}
 }
@@ -34,77 +34,48 @@
 \begin{document}
 \maketitle
 
+Github repository: \url{https://github.com/ChristophSchmidl/web-security/}
+
 \begin{enumerate}
 
-\item Do the following two lessons in WebGoat (you do not have to submit any notes regarding these exercises to blackboard):
+\item Do the following three exercises on \url{http://websecurity.cs.ru.nl/}:
 
 	\begin{itemize}
-		\item Session Management Flaws - Hijack a Session
+		\item Level 0\\
+		\textbf{Solution:}\\
+		
+		Base64Password: TkdGbFpqRmxNbUV6		
 		
 		\begin{figure}[H]
 	    \centering
-  	    \includegraphics[width=0.8\textwidth]{img/hijack_a_session_screen.PNG}
-	    \end{figure}	
-	    
-	    Session hijacking, sometimes also known as cookie hijacking is the exploitation of a valid computer session - sometimes also called a session key - to gain unauthorized access to information or services in a computer system. In particular, it is used to refer to the theft of a magic cookie used to authenticate a user to a remote server. In this particular lesson the value of the cookie named "WEAKID" can be bruteforced by using a tool like JHijack. To find a value to start with you can use the SessionID Analysis Tab of WebScarab. You do not know the identity of the user's session you are going to hijack beforehand.\\
-	    
-		\item Session Management Flaws - Session Fixation
-		
-		\begin{figure}[H]
-	    \centering
-  	    \includegraphics[width=0.8\textwidth]{img/session_fixation_screen.PNG}
-	    \end{figure}	
-	\end{itemize}
-
-Session fixation attacks attempt to exploit the vulnerability of a system that allows one person to fixate (find or set) another person's session identifier. Most session fixation attacks are web based, and most rely on session identifiers being accepted from URLs (query string) or POST data. A misconception is that if a server only accepts server-generated session identifiers, it is safe from fixation. This is false.\\
-
-
-\item Inspect 5 websites for which you got login credentials
-	\begin{itemize}
-		\item Do these website use HSTS (HTTP Strict Transport Security)?\\
-		
-		What is HSTS and why is it important? HSTS stands for HTTP Strict Transport Security and tells the browser to only use HTTPS when communicating with the server and not relying on an insecure HTTP connection. HSTS is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. The HSTS policy is communicated by the server to the user agent via an HTTP response header field named "Strict-Transport-Security". HSTS policy specifies a period of time which the user agent should only access the server in a secure fashion. Facebook introduced this policy to their website in 2013: \url{https://www.facebook.com/notes/facebook-engineering/secure-browsing-by-default/10151590414803920/} Before that time an attacker was able to intercept a request and serve a different page, including a fake login one (assumed he was trying to visit a subdomain of facebook (\url{https://null-byte.wonderhowto.com/how-to/bypass-facebooks-hsts-0169414/})). Below you can find a https response from facebook when you're logged in.		
-		
-		\begin{figure}[H]
-	    \centering
-  	    \includegraphics[width=0.8\textwidth]{img/facebook_hsts.PNG}
-	    \end{figure}	
-	    
-	    		\begin{figure}[H]
-	    \centering
-  	    \includegraphics[width=0.8\textwidth]{img/facebook_security.PNG}
+  	    \includegraphics[width=0.8\textwidth]{img/level_0.PNG}
 	    \end{figure}			
 		
+		\item Level 1\\
+		\textbf{Solution:}\\
 		
-		\item Does the session ID cookie of these websites use \textit{Secure} and/or \textit{HttpOnly}?\\
+		Piet:NTY5M2IyYTc2
 		
-		Security of cookies is an important subject. HttpOnly and secure flags can be used to make the cookies more secure. When a secure flag is used, then the cookie will only be sent over HTTPS, which is HTTP over SSL/TLS. When this is the case, the attacker eavesdropping on the communication channel from the browser to the server will not be able to read the cookie (HTTPS provides authentication, data integrity and confidentiality).\\
+		\begin{figure}[H]
+	    \centering
+  	    \includegraphics[width=0.8\textwidth]{img/level_1.PNG}
+	    \end{figure}		
 		
-		When HttpOnly flag is used, JavaScript will not be able to read the cookie in case of XSS exploitation. A combination of HTTP TRACE method and XSS might be used to bypass HttpOnly flag – this combination is cross-site tracing (XST) attack. It turns out that modern browsers block the HTTP TRACE method in XMLHttpRequest. However, it’s still important to know how XST works. If the attacker finds another way of sending HTTP TRACE, then he can bypass an HttpOnly flag when he understands how XST works. (taken from: \url{http://resources.infosecinstitute.com/securing-cookies-httponly-secure-flags/})\\
 		
-		Facebook implemented this feature to their site in 2013 together with their HSTS feature (\url{https://www.facebook.com/notes/facebook-engineering/secure-browsing-by-default/10151590414803920/}). They say "The secure attribute for authentication cookies. By default, web browsers send all cookies, including authentication cookies, on insecure requests. We’ve implemented the secure attribute in the Set-Cookie header, which instructs the browser to only send these cookies on https requests so the cookies won't be visible on the network if you happen to visit an insecure link to Facebook."\\
+		\item Level 2\\
+		\textbf{Solution:}\\
+
+		input=1+Union+ALL+SELECT+1,2,3,name+from+sqlite\_master\\
+		the users table became OTg5ZmMyZWM1 table\\
+		input=1+Union+ALL+SELECT+1,id,name,password+from+OTg5ZmMyZWM1			
 		
-		Facebook stores its login session information in different cookies (\url{http://hackwhiz.com/2015/01/facebook-cookie-stealing-and-session-hijacking/}). But the important ones are secured by the httpOnly and Secure flag.
+		\begin{figure}[H]
+	    \centering
+  	    \includegraphics[width=0.8\textwidth]{img/level_2.PNG}
+	    \end{figure}	
+		
 		
 	\end{itemize}
-
-Make a table of these websites and their support for HSTS, the name of the cookie and the usage of \textit{Secure} and \textit{HttpOnly} for that cookie.\\
-\textbf{Solution:}\\
-
-\begin{table}[h!]
-\centering
-\label{my-label}
-\begin{tabular}{|c|l|c|c|l|}
-\hline
-\textbf{Website} & \textbf{HSTS} & \textbf{Cookie Name}  & \textbf{Secure} & \textbf{HttpOnly} \\ \hline
-facebook.com  & yes &   multiple cookies (c\_user, xs, sb)  & yes, yes, yes                      & no, yes, yes \\ \hline
-mail.ru.nl   & no &  cadata                     &   yes                    & yes  \\ \hline
-linkedin.com  & no & li\_at                      &    yes                   & yes  \\ \hline
-github.com  & yes &   	\_gh\_sess                    &  yes                     & yes  \\ \hline
-gmx.net & yes & 905a7a5991a00898953878290a55d118 & yes & yes \\ \hline
-\end{tabular}
-\caption{Website Information}
-\end{table}
 
 
 \end{enumerate}
