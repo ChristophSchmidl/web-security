@@ -1,6 +1,6 @@
 # Assignment 3
 
-* Do the following two lessons in WebGoat (you do not have to submit any notes regarding these exercises to blackboard):
+* Do the following lessons in WebGoat (you do not have to submit any notes regarding these exercises to blackboard):
 
 	* Injection Flaws - Command Injection
 
