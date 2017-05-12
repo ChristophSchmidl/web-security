@@ -11,7 +11,7 @@
 	* Injection Flaws - Numeric SQL Injection
 		
 		* This lesson is using a simple sql query and specifies the station by its id. By appending OR 1=1 to the where clause, you'll get information about all stations.
-		* ![NumericSQLInjectionSuccess](img/numeric_sql_injection.PNG.PNG)
+		* ![NumericSQLInjectionSuccess](img/numeric_sql_injection.PNG)
 
 	* Injection Flaws - Log Spoofing
 		* Answer
