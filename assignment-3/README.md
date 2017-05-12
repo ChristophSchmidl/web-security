@@ -18,7 +18,9 @@
 		* ![LogSpoofingSuccess](img/log_spoofing.PNG)
 
 	* Injection Flaws - String SQL Injection
-		* Answer
+		
+		* By appending the following string to the end of the where clause you'll get all entries from user_data: ' OR 1=1--
+		* ![StringSQLInjectionSuccess](img/string_sql_injection.PNG)
 
 	* Injection Flaws - LAB SQL Injection
 		* Answer				
