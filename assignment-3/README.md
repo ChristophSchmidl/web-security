@@ -30,7 +30,8 @@
 * Do the following three exercises on http://websecurity.cs.ru.nl/
 	
 	* Level 0
-		* Answer
+		* Base64Password: TkdGbFpqRmxNbUV6
+		* ![Level0](img/level_0.PNG)	
 
 	* Level 1
 		* Answer
