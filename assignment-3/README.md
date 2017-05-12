@@ -4,7 +4,9 @@
 
 	* Injection Flaws - Command Injection
 
-		* Answer
+		* This lesson is using a cat command in the background to get the content of certain help-files which you can choose from in a drop down list. By manipulating the input for HelpFile, you can append your own command which gets executed on the server. In this case I just appended the command "& netstat -an ". Double quotes have to be included. This command has to be url encoded and then appended to the actual value for HelpFile. Example: HelpFile=BackDoors.help%22%26%20netstat%20-an%20%22
+		* ![CommandInjectionRequest](img/command_injection_request.PNG)
+		* ![CommandInjectionSuccess](img/command_injection.PNG)
 
 	* Injection Flaws - Numeric SQL Injection
 		* Answer
