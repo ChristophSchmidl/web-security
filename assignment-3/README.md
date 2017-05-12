@@ -14,7 +14,8 @@
 		* ![NumericSQLInjectionSuccess](img/numeric_sql_injection.PNG)
 
 	* Injection Flaws - Log Spoofing
-		* Answer
+		
+		* ![LogSpoofingSuccess](img/log_spoofing.PNG)
 
 	* Injection Flaws - String SQL Injection
 		* Answer
