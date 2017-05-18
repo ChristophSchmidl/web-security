@@ -21,6 +21,7 @@
 	* Level 4
 		* http://websecurity.cs.ru.nl/?level=4&nieuws=admin/index.php%00
 		* The appended string "%00" represents the nullbyte (\0) and forces php to ignore every appended string behind it
+		* See also: http://stackoverflow.com/questions/12731547/can-an-appended-file-suffix-to-a-parameter-for-file-get-contents-be-bypassed
 		* Solution: ZjQ5ZmVlOTZm
 	* Level 5
 	* Level 6
