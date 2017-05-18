@@ -9,7 +9,7 @@
 
 	* Cross-Site Scripting (XSS) - Reflected XSS attacks
 
-		* ![ReflectedXSS](img/reflected_xss_1.PNG)	
+		* ![ReflectedXSS](img/reflected_xss.PNG)	
 
 * Do the following three exercises on http://websecurity.cs.ru.nl/
 	
