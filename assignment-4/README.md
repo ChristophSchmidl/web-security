@@ -45,6 +45,18 @@
 		* See also: https://www.owasp.org/images/6/6b/PHPMagicTricks-TypeJuggling.pdf
 		* Solution: YjU1NWY4MzBi
 
+	* Level 8
+	
+		* No idea so far. Seems like i have to change the referer.
+
+	* Level 9
+	
+		* Do a post request with some testdata for the input fields. Take a look at this post request in WebScarab and change the cookie value "LoggedIn=false" to "LoggedIn=true".
+		* WEnn you fire the manual request in WebScarab, you should be able to see the password.
+		* Solution: OGRkNDRmMDU3	
+
+
+
 		
 
 
