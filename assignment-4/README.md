@@ -55,6 +55,23 @@
 		* When you fire the manual request in WebScarab, you should be able to see the password.
 		* Solution: OGRkNDRmMDU3	
 
+	* Level 10
+		
+		* Just reverse the encryption steps
+		* ```
+			function reverseHexdigest() {
+			  var hexdigest = "447b5974467c6f5f600a4261";
+			  
+			  var deximalRepresentation = [68, 123, 89, 116, 70, 124, 111, 95 , 96, 10, 66, 97];
+			  var reversedShuffled = shuffle([6, 1, 5, 10, 8, 2, 0, 7,3 ,4 ,11 ,9], deximalRepresentation);
+			  var reversedXor = xor([32, 44, 38, 41, 46, 35, 47, 39, 46, 44, 48, 57], reversedShuffled);
+
+
+			  console.log(String.fromCharCode.apply(null, reversedXor));  
+			};
+
+		* Solution: OWZkNzkxZjQ3	
+
 
 
 		
