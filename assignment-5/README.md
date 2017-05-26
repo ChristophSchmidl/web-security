@@ -1,4 +1,4 @@
-# Assignment 4
+# Assignment 5
 
 * Do the following lessons in WebGoat (you do not have to submit any notes regarding these exercises to blackboard):
 
@@ -9,11 +9,13 @@
 
 	* Improper Error Handling - Fail Open Authentication Scheme
 
-		* 	
+		* Just strip the password parameters from the post request
+		* ![ErrorHandling1](img/error_handling_parameters.PNG)
+		* ![ErrorHandling2](img/error_handling.PNG)
 
 	* Concurrency - Shopping Cart Concurrency Flaw
 
-		* 
+		* ![ConcurrencyFlaw](img/concurrency_flaw.PNG)
 
 * Do the following four exercises on http://websecurity.cs.ru.nl/
 	
