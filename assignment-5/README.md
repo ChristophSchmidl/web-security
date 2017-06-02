@@ -27,7 +27,8 @@
 
 	* Level 8
 	
-		* No idea so far. Seems like i have to change the referer.
+		* Change the referer to localhost
+		* Solution: YTQzMzI5MWRl
 
 	* Level 9
 	
