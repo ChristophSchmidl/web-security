@@ -70,13 +70,13 @@
 
 10. How does a Remote File Inclusion attack work against a PHP web application?
 
-		* Answer
+	* Answer
 
 
 11. Assume someone has no Facebook-account. Is it possible that there is still a privacy risk where information is leaking towards Facebook?
 	Elaborate your answer. Explain why there is a risk or why there is no risk. If there is a risk, explain what kind if information could leak and what the user could do against it.
 
-		* Answer
+	* Answer
 
 
 12. This question is about the WebGoat assignment to spoof an authentication cookie.
