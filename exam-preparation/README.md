@@ -21,7 +21,7 @@ HSTS stands for **HTTP Strict Transport Security** and tells the browser to only
 
 1. Why is it a better idea to use rather a POST than a GET request when some paramters are confidential, although it is possible for an attacker who eavesdrops the network traffic to inspect the data in both cases?
 
-	* Answer
+	* It is true that POST and GET requests do not provide protection against eavesdropping out-of-the-box. There is no special encoding which would ensure protection. An attacker can read the sensitive data from the query string or from the body part of the HTTP request. The only difference between GET and POST requests is their purpose and behaviour. GET requests should only be used to request a ressource or retrieve data. GET should be used for idempotent operations, i.e. operations without side effects on the server. The drawback of a GET request is their visibile query string in the URL. A GET request should not be used for sensitive data because a GET request can be cached, bookmarked, has a maximum length and ends up in browser history. POST should be used to submit a request and has its parameters in its body. POST requests are never cached, cannot be bookmarked and do not end up in browser history. It also has no restrictions on length which emphasizes its purpose on submitting and not retrieving data.
 
 2. How does HSTS work? Also try to explain what attacks HSTS tries to prevent and how.
 
@@ -33,7 +33,7 @@ HSTS stands for **HTTP Strict Transport Security** and tells the browser to only
 	* Answer
 
 
-4. Is CSRF abusing the trust of a website in to the user or the trust of the client/user in the website? Elaborate your answer.
+4. Is CSRF abusing the trust of a website in the user or the trust of the client/user in the website? Elaborate your answer.
 
 	* Answer
 
